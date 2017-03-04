@@ -1,0 +1,16 @@
+# Systemd unit file for solr
+[Unit]
+Description=Solr Server
+After=syslog.target network.target
+
+[Service]
+Type=forking
+Environment=JAVA_HOME=/usr/jdk64/jdk1.8.0_102
+ExecStart=/apps/solr/solr_cloud/scripts/start_solr.sh 
+ExecStop=/apps/solr/solr_cloud/scripts/stop_solr.sh 
+
+User=solr
+Group=solr
+
+[Install]
+WantedBy=multi-user.target

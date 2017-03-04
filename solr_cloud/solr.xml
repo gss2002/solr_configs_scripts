@@ -1,0 +1,12 @@
+<solr>
+  <str name="coreRootDirectory">/apps/solr_config/</str>
+  <solrcloud>
+    <str name="host">${host:}</str>
+    <int name="hostPort">${jetty.port:}</int>
+    <str name="hostContext">${hostContext:solr}</str>
+    <int name="zkClientTimeout">${zkClientTimeout:15000}</int>
+    <bool name="genericCoreNodeNames">${genericCoreNodeNames:true}</bool>
+    <str name="zkCredentialsProvider">${zkCredentialsProvider:org.apache.solr.common.cloud.DefaultZkCredentialsProvider}</str>
+    <str name="zkACLProvider">${zkACLProvider:org.apache.solr.common.cloud.SaslZkACLProvider}</str>
+  </solrcloud>
+</solr>

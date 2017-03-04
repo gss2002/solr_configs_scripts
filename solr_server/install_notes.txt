@@ -1,0 +1,25 @@
+Solr installation notes for Ranger Audits.
+
+Note: Don't edit this file. It will be over written if you run ./setup.sh again.
+
+You have installed Solr in standalone mode.
+
+Note: In production deployment, it is recommended to run in SolrCloud mode with at least 2 nodes and replication factor 2
+
+Start and Stoping Solr:
+Login as user solr or root and the run the below commands to start or stop Solr:
+
+To start Solr run: /apps/solr/ranger_audit_server/scripts/start_solr.sh
+To stop Solr run: /apps/solr/ranger_audit_server/scripts/stop_solr.sh
+
+After starting Solr for RangerAudit, Solr will listen at 6083. E.g http://ha21t56mn.tech.hdp.example.com:6083
+
+Configure Ranger to use the following URL http://ha21t56mn.tech.hdp.example.com:6083/solr/ranger_audits
+
+Solr HOME for Ranger Audit is /apps/solr/ranger_audit_server
+
+DATA FOLDER: /hadoop/solr/ranger_audit_server/data
+
+Make sure you have enough disk space for index. In production, it is recommended to have at least 1TB free.
+Filesystem                   Size  Used Avail Use% Mounted on
+/dev/mapper/hadoop-datalake   50G  5.6G   45G  12% /hadoop

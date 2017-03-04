@@ -1,0 +1,5 @@
+{ "authentication" :
+	{ "class" : "org.apache.solr.security.KerberosPlugin" },
+  "authorization" :
+	{ "class" : "org.apache.ranger.authorization.solr.authorizer.RangerSolrAuthorizer" }
+}
